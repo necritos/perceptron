@@ -69,7 +69,7 @@ function calcular(){
                 cont++;
             }
         }
-        if(cont==4||ep==20){
+        if(cont==4||ep==100){
             console.log(cont+" "+ep);
             no_cumple=false;
         }
