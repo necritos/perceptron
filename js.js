@@ -8,7 +8,7 @@
 var number=0;
 var w1,w2,w3,e;
 var patrones=[];
-
+var cmb=-1;
 function patron(x1,x2,b,c){
     this.x1 = x1;
     this.x2 = x2;
@@ -34,7 +34,9 @@ function crear(){
     }
 }
 function result(){
+
     patrones=[];
+
     for(var i=0;i<number;i++){
         var p=new patron(parseFloat($('#x1'+i).val()),parseFloat($('#x2'+i).val()),parseFloat($('#b'+i).val()),parseFloat($('#c'+i).val()));
         patrones.push(p);
@@ -43,6 +45,10 @@ function result(){
     w1=parseFloat($('#w1').val());
     w2=parseFloat($('#w2').val());
     w3=parseFloat($('#w3').val());
+    if($('#tipo1').is(':checked'))
+        cmb=-1;
+    else
+        cmb=0;
     calcular();
 }
 function calcular(){
@@ -96,7 +102,7 @@ function net(p){
     var t= p.c;
     var val= p.x1*w1+p.x2*w2+p.b*w3;
     if(val<=0)
-        d=-1;
+        d=cmb;
     else
         d=1;
     return (t-d);

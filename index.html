@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="utf-8">
     <script type="text/javascript" src="jquery-1.9.0.min.js"></script>
     <script type="text/javascript" src="bootstrap.js"></script>
     <script type="text/javascript" src="jquery.mCustomScrollbar.concat.min.js"></script>
@@ -29,6 +30,13 @@
                         <label>Numero de patrones: </label>
                         <input placeholder="Entero positivo" id="number" type="number" required />
                     </div>
+                    <div class="control-group">
+                        <label>Tipo: </label>
+                        Función signo (-1)
+                        <input id="tipo1" name="tipo" type="radio" value="-1" checked />
+                        Función paso (0)
+                        <input id="tipo2" name="tipo" type="radio" value="0" />
+                    </div>
                     <button class="btn  btn-success" onclick="crear()" id="crear">Crear</button>
                 </div>
                 <div id="vals">
@@ -42,8 +50,8 @@
                     <input placeholder="W1" class="input-mini" type="number" id="w3" required/>
                 </div>
                 <div id="er">
-                    <h3>Factor de aprendisaje</h3>
-                    <input placeholder="error" type="number" id="e" required/>    </div>
+                    <h3>Factor de aprendizaje</h3>
+                    <input placeholder="" type="number" id="e" required/>    </div>
                 <div>
                     <button  class="btn btn-large btn-primary" onclick="result()" id="result">Generar</button>
                 </div>
